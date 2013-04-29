@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+    <style>
+        input, label {
+            display: block;
+        }
+
+        #mainForm {
+            margin: 50px;
+            margin-right:10px;
+            margin-top:200px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 400px;
+            display: inline-block;
+        }
+
+        #vehicleContainer {
+            width: 700px;
+            padding:20px;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 5px;
+            position: absolute;
+            top: 210px;
+            left: 520px;
+        }
+            #vehicleContainer h1 {
+            margin-left:210px;
+            }
+            #vehicleContainer div img {
+                float:left;
+            /*margin-left:30%;*/
+            }
+            #vehicleContainer div p {
+                 float:right;
+            /*margin-left:40%;*/
+            }
+    </style>
+</head>
+<body>
+    <div id="mainForm">
+        <label for="name">Enter the name of the vihicle:</label>
+        <input type="text" id="name" />
+        <label for="type">Enter the type of the vihicle:</label>
+        <select id="type" onchange="checkTypeOfVehicle()">
+            <option class="typeOfVehicle" value="Car">Car</option>
+            <option class="typeOfVehicle" value="Boat">Boat</option>
+            <option class="typeOfVehicle" value="AirPlane">AirPlane</option>
+            <option class="typeOfVehicle" value="AmphybiasVehicle">AmphybiasVehicle</option>
+        </select>
+        <div id="vihicleProp"></div>
+        <button onclick="createTheVehicle()">Create The Vehicle</button>
+    </div>
+    <div id="vehicleContainer">
+        <h1>Your vehicle</h1>
+        <div id="displayVehicle">
+        </div>
+        <div id="vehicleInfo">
+
+        </div>
+    </div>
+    <script src="scripts/vehicle.js"></script>
+    <script src="scripts/hardcoredVehicle.js"></script>
+</body>
+</html>
